@@ -1,0 +1,96 @@
+sphn:
+  concepts:
+    - Intent
+    - Laterality
+    - MeasurementMethod
+    - CareHandling
+    - DataProviderInstitute
+    - BodySite
+    - Substance
+    - HealthcareEncounter
+    - AdministrativeCase
+    - AdministrativeGender
+    - BirthDate
+#    - Age
+    - DeathDate
+    - Consent
+    - CivilStatus
+    - DeathStatus
+    - SubjectPseudoIdentifier
+    - Location
+    - Quantity
+    - BodyTemperature
+    - BodyHeight
+    - BodyWeight
+    - BloodPressure
+    - FOPHDiagnosis
+    - FOPHProcedure
+    - Drug
+    - PharmaceuticalDoseForm
+    - DrugAdministrationEvent
+    - DrugPrescription
+    - Code
+    - Allergy
+    - TimePattern
+    - Biosample
+    - LabResult
+    - LabTest
+    - ReferenceRange
+    - HeartRate
+    - OxygenSaturation
+    - TNMClassification
+    - TumorGrade
+    - TumorStage
+    - RadiotherapyProcedure
+    - OncologyTreatmentAssessment
+    - ICDODiagnosis
+    - NursingDiagnosis
+#    - CircumferenceMeasure
+#    - ProblemCondition
+#    - TumorSpecimen
+#    - LabAnalyzer
+
+
+namespaces:
+  sphn: https://biomedit.ch/rdf/sphn-ontology/sphn#
+  resource: https://biomedit.ch/rdf/sphn-resource/
+  loinc: https://loinc.org/rdf/
+#  psss: https://biomedit.ch/rdf/sphn-ontology/psss#
+  chop: https://biomedit.ch/rdf/sphn-resource/chop/
+  atc: https://www.whocc.no/atc_ddd_index/?code=
+  snomed: http://snomed.info/id/
+  icd-10-gm: https://biomedit.ch/rdf/sphn-resource/icd-10-gm/
+  ucum: https://biomedit.ch/rdf/sphn-resource/ucum/
+
+
+# external terminologies provided by DCC
+terminologies:
+  LOINC: [loinc, LOINC-]
+  ATC: [atc, Code-ATC-]
+  SNOMED: [snomed, Code-SNOMED-CT-]
+  ICD-10-GM: [icd-10-gm, Code-ICD-10-GM-]
+  CHOP: [chop, Code-CHOP-]
+
+
+# no need of tables (instantiated in code if listed here)
+instances:
+  Unit: [sphn, hasCode, ucum, Unit-UCUM-, Unit]
+  TherapeuticArea: [sphn, hasSpecialtyName, sphn, TherapeuticArea-, TherapeuticArea]
+
+
+valuesets:
+  Location_class: sphn
+  BirthDate_comparator: sphn
+  FOPHDiagnosis_rank: sphn
+  FOPHProcedure_rank: sphn
+  Biosample_materialTypeLiquid: sphn
+  Biosample_materialTypeTissue: sphn
+  Biosample_storageContainer: sphn
+  Biosample_primaryContainer: sphn
+  Biosample_fixationType: sphn
+  Quantity_comparator: sphn
+  DrugPrescription_indicationToStart: sphn
+  Allergy_substanceCategory: sphn
+  OncologyTreatmentAssessment_criteria: sphn
+  OncologyTreatmentAssessment_result: sphn
+  OncologyTreatmentAssessment_progressionType: sphn

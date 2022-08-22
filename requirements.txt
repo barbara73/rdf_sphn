@@ -1,0 +1,11 @@
+pandas
+pyodbc
+python-dateutil
+rdflib
+PyYAML
+python-dotenv
+pytz
+uuid
+SQLAlchemy
+logdecoratorandhandler
+python-dotenv

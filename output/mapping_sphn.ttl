@@ -1,0 +1,575 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sphn: <https://biomedit.ch/rdf/sphn-ontology/sphn#> .
+
+sphn:AdministrativeCase rdfs:label "AdministrativeCase" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:AdministrativeGender rdfs:label "AdministrativeGender" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Age rdfs:label "Age" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Allergy rdfs:label "Allergy" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Biosample rdfs:label "Biosample" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:BirthDate rdfs:label "BirthDate" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:BloodPressure rdfs:label "BloodPressure" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:BodyHeight rdfs:label "BodyHeight" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:BodySite rdfs:label "BodySite" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:BodyTemperature rdfs:label "BodyTemperature" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:BodyWeight rdfs:label "BodyWeight" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:CareHandling rdfs:label "CareHandling" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:CircumferenceMeasure rdfs:label "CircumferenceMeasure" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:CivilStatus rdfs:label "CivilStatus" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Code rdfs:label "Code" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Consent rdfs:label "Consent" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:DataProviderInstitute rdfs:label "DataProviderInstitute" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:DeathDate rdfs:label "DeathDate" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:DeathStatus rdfs:label "DeathStatus" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Drug rdfs:label "Drug" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:DrugAdministrationEvent rdfs:label "DrugAdministrationEvent" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:DrugPrescription rdfs:label "DrugPrescription" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:FOPHDiagnosis rdfs:label "FOPHDiagnosis" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:FOPHProcedure rdfs:label "FOPHProcedure" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:HealthcareEncounter rdfs:label "HealthcareEncounter" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:HeartRate rdfs:label "HeartRate" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:ICDODiagnosis rdfs:label "ICDODiagnosis" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Intent rdfs:label "Intent" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:LabAnalyzer rdfs:label "LabAnalyzer" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:LabResult rdfs:label "LabResult" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:LabTest rdfs:label "LabTest" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Laterality rdfs:label "Laterality" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Location rdfs:label "Location" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:MeasurementMethod rdfs:label "MeasurementMethod" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:NursingDiagnosis rdfs:label "NursingDiagnosis" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:OncologyTreatmentAssessment rdfs:label "OncologyTreatmentAssessment" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:OxygenSaturation rdfs:label "OxygenSaturation" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:PharmaceuticalDoseForm rdfs:label "PharmaceuticalDoseForm" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:ProblemCondition rdfs:label "ProblemCondition" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Quantity rdfs:label "Quantity" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:RadiotherapyProcedure rdfs:label "RadiotherapyProcedure" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:ReferenceRange rdfs:label "ReferenceRange" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:SubjectPseudoIdentifier rdfs:label "SubjectPseudoIdentifier" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Substance rdfs:label "Substance" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:TNMClassification rdfs:label "TNMClassification" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:TherapeuticArea rdfs:label "TherapeuticArea" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:TimePattern rdfs:label "TimePattern" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:TumorGrade rdfs:label "TumorGrade" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:TumorSpecimen rdfs:label "TumorSpecimen" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:TumorStage rdfs:label "TumorStage" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:Unit rdfs:label "Unit" ;
+    sphn:usz_mapping_to "None" .
+
+sphn:hasActiveIngredient rdfs:label "hasActiveIngredient" ;
+    sphn:usz_mapping_to "ActiveIngredient" .
+
+sphn:hasAdministrableDoseForm rdfs:label "hasAdministrableDoseForm" ;
+    sphn:usz_mapping_to "AdministrableDoseForm",
+        "PrescriptionAdministrableDoseForm" .
+
+sphn:hasAdministrationRouteCode rdfs:label "hasAdministrationRouteCode" ;
+    sphn:usz_mapping_to "AdministrationRoute",
+        "PrescriptionAdministrationRoute" .
+
+sphn:hasAdministrativeCase rdfs:label "hasAdministrativeCase" ;
+    sphn:usz_mapping_to "fall" .
+
+sphn:hasAdmissionDateTime rdfs:label "hasAdmissionDateTime" ;
+    sphn:usz_mapping_to "DateAdmission" .
+
+sphn:hasAssessmentDateTime rdfs:label "hasAssessmentDateTime" ;
+    sphn:usz_mapping_to "AssessmentDateTime",
+        "OncologyAssessmentDateTime",
+        "TumorGradeAssessmentDateTime",
+        "TumorStageAssessmentDateTime" .
+
+sphn:hasBiosample rdfs:label "hasBiosample" ;
+    sphn:usz_mapping_to "BiosampleId",
+        "TumorSpecimenBiosample" .
+
+sphn:hasBodySite rdfs:label "hasBodySite" ;
+    sphn:usz_mapping_to "BiosampleBodySite",
+        "CircumferenceBodySite",
+        "HeartRateBodySite",
+        "OxygenSaturationBodySite",
+        "PressureBodySite",
+        "ProcedureBodySite",
+        "TargetBodySite",
+        "TemperatureBodySite" .
+
+sphn:hasCareHandling rdfs:label "hasCareHandling" ;
+    sphn:usz_mapping_to "CareHandling" .
+
+sphn:hasClass rdfs:label "hasClass" ;
+    sphn:usz_mapping_to "LocationClass" .
+
+sphn:hasCode rdfs:label "hasCode" ;
+    sphn:usz_mapping_to "AdministrativeGender",
+        "BodySite",
+        "ChopProcedure",
+        "CivilStatus",
+        "DataProviderInstitute",
+        "DeathStatus",
+        "Diagnosis",
+        "DoseForm",
+        "Grade",
+        "Intent",
+        "LabTest",
+        "Laterality",
+        "MeasurementMethod",
+        "NursingDiagnosisCode",
+        "ProblemCondition",
+        "QuantityCode",
+        "RTCode",
+        "Stage",
+        "Substance",
+        "Unit" .
+
+sphn:hasCodingDateTime rdfs:label "hasCodingDateTime" ;
+    sphn:usz_mapping_to "DiagnosisCodingDateTime",
+        "NursingDiagnosisCodingDateTime",
+        "ProcedureCodingDateTime",
+        "RTCodingDateTime" .
+
+sphn:hasCodingSystemAndVersion rdfs:label "hasCodingSystemAndVersion" ;
+    sphn:usz_mapping_to "CodeVersion" .
+
+sphn:hasCollectionDateTime rdfs:label "hasCollectionDateTime" ;
+    sphn:usz_mapping_to "BiosampleCollectionDateTime" .
+
+sphn:hasComment rdfs:label "hasComment" ;
+    sphn:usz_mapping_to "Comment" .
+
+sphn:hasComparator rdfs:label "hasComparator" ;
+    sphn:usz_mapping_to "DateOfBirthComparator",
+        "QuantityComparator" .
+
+sphn:hasCriteria rdfs:label "hasCriteria" ;
+    sphn:usz_mapping_to "AssessmentCriteria" .
+
+sphn:hasCurrentLocation rdfs:label "hasCurrentLocation" ;
+    sphn:usz_mapping_to "CurrentLocation" .
+
+sphn:hasDataProviderInstitute rdfs:label "hasDataProviderInstitute" ;
+    sphn:usz_mapping_to "institute" .
+
+sphn:hasDateTime rdfs:label "hasDateTime" ;
+    sphn:usz_mapping_to "ConsentDateTime" .
+
+sphn:hasDay rdfs:label "hasDay" ;
+    sphn:usz_mapping_to "DayOfBirth",
+        "DayOfDeath" .
+
+sphn:hasDeathDate rdfs:label "hasDeathDate" ;
+    sphn:usz_mapping_to "DateOfDeath" .
+
+sphn:hasDeterminationDateTime rdfs:label "hasDeterminationDateTime" ;
+    sphn:usz_mapping_to "AgeDeterminationDateTime" .
+
+sphn:hasDiastolicPressure rdfs:label "hasDiastolicPressure" ;
+    sphn:usz_mapping_to "DiastolicPressure" .
+
+sphn:hasDischargeDateTime rdfs:label "hasDischargeDateTime" ;
+    sphn:usz_mapping_to "DateDischarge" .
+
+sphn:hasDischargeLocation rdfs:label "hasDischargeLocation" ;
+    sphn:usz_mapping_to "DischargeLocation" .
+
+sphn:hasDrug rdfs:label "hasDrug" ;
+    sphn:usz_mapping_to "AdministrationDrug",
+        "PrescriptionDrug" .
+
+sphn:hasDrugQuantity rdfs:label "hasDrugQuantity" ;
+    sphn:usz_mapping_to "AdministrationDrugQuantity",
+        "PrescriptionDrugQuantity" .
+
+sphn:hasDuration rdfs:label "hasDuration" ;
+    sphn:usz_mapping_to "AdministrationDuration" .
+
+sphn:hasEndDateTime rdfs:label "hasEndDateTime" ;
+    sphn:usz_mapping_to "AdministrationEnd",
+        "HCEndDateTime",
+        "ProcedureEndDateTime",
+        "RTEndDateTime" .
+
+sphn:hasEventDateTime rdfs:label "hasEventDateTime" ;
+    sphn:usz_mapping_to "CivilStatusDateTime" .
+
+sphn:hasExact rdfs:label "hasExact" ;
+    sphn:usz_mapping_to "LocationExact" .
+
+sphn:hasFirstAdministrationDateTime rdfs:label "hasFirstAdministrationDateTime" ;
+    sphn:usz_mapping_to "FirstAdministrationDateTime" .
+
+sphn:hasFirstRecordDateTime rdfs:label "hasFirstRecordDateTime" ;
+    sphn:usz_mapping_to "FirstRecordDateTime" .
+
+sphn:hasFixationType rdfs:label "hasFixationType" ;
+    sphn:usz_mapping_to "FixationType" .
+
+sphn:hasFractionsNumber rdfs:label "hasFractionsNumber" ;
+    sphn:usz_mapping_to "FractionsNumber" .
+
+sphn:hasFreeText rdfs:label "hasFreeText" ;
+    sphn:usz_mapping_to "ProblemDescription" .
+
+sphn:hasFrequency rdfs:label "hasFrequency" ;
+    sphn:usz_mapping_to "PrescriptionFrequency" .
+
+sphn:hasGenericName rdfs:label "hasGenericName" ;
+    sphn:usz_mapping_to "SubstanceGenericName" .
+
+sphn:hasIdentifier rdfs:label "hasIdentifier" ;
+    sphn:usz_mapping_to "Code",
+        "ConsentId",
+        "HCUniqueId",
+        "ResearchCaseId",
+        "ResearchPatientId" .
+
+sphn:hasInactiveIngredient rdfs:label "hasInactiveIngredient" ;
+    sphn:usz_mapping_to "InactiveIngredient" .
+
+sphn:hasIndikationToStart rdfs:label "hasIndikationToStart" ;
+    sphn:usz_mapping_to "IndikationToStart" .
+
+sphn:hasInstrument rdfs:label "hasInstrument" ;
+    sphn:usz_mapping_to "LabInstrument" .
+
+sphn:hasIntent rdfs:label "hasIntent" ;
+    sphn:usz_mapping_to "PrescriptionIntent",
+        "ProcedureIntent" .
+
+sphn:hasLabTest rdfs:label "hasLabTest" ;
+    sphn:usz_mapping_to "UniqueIDLabTest" .
+
+sphn:hasLastAdministrationDateTime rdfs:label "hasLastAdministrationDateTime" ;
+    sphn:usz_mapping_to "LastAdministrationDateTime" .
+
+sphn:hasLastReactionDateTime rdfs:label "hasLastReactionDateTime" ;
+    sphn:usz_mapping_to "LastReactionDateTime" .
+
+sphn:hasLaterality rdfs:label "hasLaterality" ;
+    sphn:usz_mapping_to "BodySiteLaterality" .
+
+sphn:hasLowerLimit rdfs:label "hasLowerLimit" ;
+    sphn:usz_mapping_to "LowerLimit" .
+
+sphn:hasMPrefix rdfs:label "hasMPrefix" ;
+    sphn:usz_mapping_to "MPrefix" .
+
+sphn:hasMSuffix rdfs:label "hasMSuffix" ;
+    sphn:usz_mapping_to "MSuffix" .
+
+sphn:hasManufacturedDoseForm rdfs:label "hasManufacturedDoseForm" ;
+    sphn:usz_mapping_to "ManufacturedDoseForm" .
+
+sphn:hasMaterialTypeLiquid rdfs:label "hasMaterialTypeLiquid" ;
+    sphn:usz_mapping_to "MaterialTypeLiquid" .
+
+sphn:hasMaterialTypeTissue rdfs:label "hasMaterialTypeTissue" ;
+    sphn:usz_mapping_to "MaterialTypeTissue" .
+
+sphn:hasMeanPressure rdfs:label "hasMeanPressure" ;
+    sphn:usz_mapping_to "MeanPressure" .
+
+sphn:hasMeasurementDateTime rdfs:label "hasMeasurementDateTime" ;
+    sphn:usz_mapping_to "CircumferenceDateTime",
+        "HeartRateDateTime",
+        "HeightDateTime",
+        "OxygenSaturationDateTime",
+        "PressureDateTime",
+        "TemperatureDateTime",
+        "WeightDateTime" .
+
+sphn:hasMeasurementMethod rdfs:label "hasMeasurementMethod" ;
+    sphn:usz_mapping_to "HeartRateMeasurementMethod",
+        "OxygenSaturationMeasurementMethod",
+        "PressureMeasurementMethod" .
+
+sphn:hasMethodCode rdfs:label "hasMethodCode" ;
+    sphn:usz_mapping_to "AssessmentMethod" .
+
+sphn:hasMonth rdfs:label "hasMonth" ;
+    sphn:usz_mapping_to "MonthOfBirth",
+        "MonthOfDeath" .
+
+sphn:hasMorphologyCode rdfs:label "hasMorphologyCode" ;
+    sphn:usz_mapping_to "MorphologyCode" .
+
+sphn:hasNPrefix rdfs:label "hasNPrefix" ;
+    sphn:usz_mapping_to "NPrefix" .
+
+sphn:hasNSuffix rdfs:label "hasNSuffix" ;
+    sphn:usz_mapping_to "NSuffix" .
+
+sphn:hasName rdfs:label "hasName" ;
+    sphn:usz_mapping_to "CodeDescription" .
+
+sphn:hasOnsetDateTime rdfs:label "hasOnsetDateTime" ;
+    sphn:usz_mapping_to "ProblemConditionOnsetDateTime" .
+
+sphn:hasOriginLocation rdfs:label "hasOriginLocation" ;
+    sphn:usz_mapping_to "OriginLocation",
+        "SourceLocation" .
+
+sphn:hasPhysiologicStateCode rdfs:label "hasPhysiologicStateCode" ;
+    sphn:usz_mapping_to "PhysiologicalState" .
+
+sphn:hasPrimaryContainer rdfs:label "hasPrimaryContainer" ;
+    sphn:usz_mapping_to "PrimaryContainer" .
+
+sphn:hasProductCode rdfs:label "hasProductCode" ;
+    sphn:usz_mapping_to "LabAnalyzerProductCode",
+        "ProductCode" .
+
+sphn:hasProgressionBodySite rdfs:label "hasProgressionBodySite" ;
+    sphn:usz_mapping_to "ProgressionBodySite" .
+
+sphn:hasProgressionType rdfs:label "hasProgressionType" ;
+    sphn:usz_mapping_to "ProgressionType" .
+
+sphn:hasQualitativeResult rdfs:label "hasQualitativeResult" ;
+    sphn:usz_mapping_to "QualitativeResult" .
+
+sphn:hasQuantitativeResult rdfs:label "hasQuantitativeResult" ;
+    sphn:usz_mapping_to "QuantitativeResult" .
+
+sphn:hasQuantitativeResultCode rdfs:label "hasQuantitativeResultCode" ;
+    sphn:usz_mapping_to "QuantitativeResultCode" .
+
+sphn:hasQuantity rdfs:label "hasQuantity" ;
+    sphn:usz_mapping_to "Age",
+        "CircumferenceMeasure",
+        "HeartRate",
+        "Height",
+        "OxygenSaturation",
+        "SubstanceQuantity",
+        "Temperature",
+        "Weight" .
+
+sphn:hasRadiationQuantity rdfs:label "hasRadiationQuantity" ;
+    sphn:usz_mapping_to "RadiationQuantity" .
+
+sphn:hasRank rdfs:label "hasRank" ;
+    sphn:usz_mapping_to "DiagnosisRank",
+        "ProcedureRank" .
+
+sphn:hasReactionTypeCode rdfs:label "hasReactionTypeCode" ;
+    sphn:usz_mapping_to "ReactionType" .
+
+sphn:hasReasonToStopCode rdfs:label "hasReasonToStopCode" ;
+    sphn:usz_mapping_to "ReasonToStop" .
+
+sphn:hasRecordDateTime rdfs:label "hasRecordDateTime" ;
+    sphn:usz_mapping_to "AdministrativeGenderRecordDateTime",
+        "DiagnosisRecordDateTime",
+        "ICDORecordDateTime",
+        "NursingDiagnosisRecordDateTime",
+        "ProblemConditionRecordDateTime" .
+
+sphn:hasReferenceRange rdfs:label "hasReferenceRange" ;
+    sphn:usz_mapping_to "UniqueIDReferenceRange" .
+
+sphn:hasRegularityCode rdfs:label "hasRegularityCode" ;
+    sphn:usz_mapping_to "Regularity" .
+
+sphn:hasRelativeTemporalityCode rdfs:label "hasRelativeTemporalityCode" ;
+    sphn:usz_mapping_to "CodeOfProblem" .
+
+sphn:hasReportDateTime rdfs:label "hasReportDateTime" ;
+    sphn:usz_mapping_to "LabResultReportDateTime" .
+
+sphn:hasResult rdfs:label "hasResult" ;
+    sphn:usz_mapping_to "AssessmentResult" .
+
+sphn:hasSeverityCode rdfs:label "hasSeverityCode" ;
+    sphn:usz_mapping_to "Severity" .
+
+sphn:hasSpecialtyName rdfs:label "hasSpecialtyName" ;
+    sphn:usz_mapping_to "TherapeuticArea" .
+
+sphn:hasStartDateTime rdfs:label "hasStartDateTime" ;
+    sphn:usz_mapping_to "AdministrationStart",
+        "HCStartDateTime",
+        "ProcedureStartDateTime",
+        "RTStartDateTime" .
+
+sphn:hasStatusCode rdfs:label "hasStatusCode" ;
+    sphn:usz_mapping_to "ConsentStatus" .
+
+sphn:hasStorageContainer rdfs:label "hasStorageContainer" ;
+    sphn:usz_mapping_to "StorageContainer" .
+
+sphn:hasSubjectAge rdfs:label "hasSubjectAge" ;
+    sphn:usz_mapping_to "DiagnosisSubjectAge",
+        "NursingDiagnosisAge",
+        "SubjectAge" .
+
+sphn:hasSubjectPseudoIdentifier rdfs:label "hasSubjectPseudoIdentifier" ;
+    sphn:usz_mapping_to "patient" .
+
+sphn:hasSubstance rdfs:label "hasSubstance" ;
+    sphn:usz_mapping_to "AllergySubstance" .
+
+sphn:hasSubstanceCategory rdfs:label "hasSubstanceCategory" ;
+    sphn:usz_mapping_to "SubstanceCategory" .
+
+sphn:hasSystolicPressure rdfs:label "hasSystolicPressure" ;
+    sphn:usz_mapping_to "SystolicPressure" .
+
+sphn:hasTPrefix rdfs:label "hasTPrefix" ;
+    sphn:usz_mapping_to "TPrefix" .
+
+sphn:hasTSuffix rdfs:label "hasTSuffix" ;
+    sphn:usz_mapping_to "TSuffix" .
+
+sphn:hasTargetLocation rdfs:label "hasTargetLocation" ;
+    sphn:usz_mapping_to "TargetLocation" .
+
+sphn:hasTemplateIdentifier rdfs:label "hasTemplateIdentifier" ;
+    sphn:usz_mapping_to "ConsentTemplateIdentifier" .
+
+sphn:hasTestKit rdfs:label "hasTestKit" ;
+    sphn:usz_mapping_to "TestKit" .
+
+sphn:hasTherapeuticArea rdfs:label "hasTherapeuticArea" ;
+    sphn:usz_mapping_to "HCTherapeuticArea" .
+
+sphn:hasTime rdfs:label "hasTime" ;
+    sphn:usz_mapping_to "TimeOfBirth",
+        "TimeOfDeath" .
+
+sphn:hasTimePattern rdfs:label "hasTimePattern" ;
+    sphn:usz_mapping_to "AdministrationTimePattern",
+        "PrescriptionTimePattern" .
+
+sphn:hasTopographyCode rdfs:label "hasTopographyCode" ;
+    sphn:usz_mapping_to "TopographyCode" .
+
+sphn:hasTumorPurity rdfs:label "hasTumorPurity" ;
+    sphn:usz_mapping_to "Purity" .
+
+sphn:hasTypeCode rdfs:label "hasTypeCode" ;
+    sphn:usz_mapping_to "CareHandlingType",
+        "ConsentType",
+        "LabAnalyzerType",
+        "TimePatternType" .
+
+sphn:hasUnit rdfs:label "hasUnit" ;
+    sphn:usz_mapping_to "QuantityUnit" .
+
+sphn:hasUpperLimit rdfs:label "hasUpperLimit" ;
+    sphn:usz_mapping_to "UpperLimit" .
+
+sphn:hasValue rdfs:label "hasValue" ;
+    sphn:usz_mapping_to "QuantityValue",
+        "TNM" .
+
+sphn:hasVerificationStatusCode rdfs:label "hasVerificationStatusCode" ;
+    sphn:usz_mapping_to "VerificationStatus" .
+
+sphn:hasVersion rdfs:label "hasVersion" ;
+    sphn:usz_mapping_to "TNMVersion" .
+
+sphn:hasYear rdfs:label "hasYear" ;
+    sphn:usz_mapping_to "YearOfBirth",
+        "YearOfDeath" .
+
+sphn:usz_mapping_to a owl:AnnotationProperty ;
+    rdfs:label "usz_mapping_to" .
+
