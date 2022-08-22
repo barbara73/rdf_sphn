@@ -146,7 +146,7 @@ class Creator:
             print(results_text, file=f)
 
 
-def run_creator(sphn_project: str) -> None:
+def run_creator(sphn_project: str, patient_list: list) -> None:
     """
     Converts the data to RDF.
 
@@ -175,20 +175,6 @@ def run_creator(sphn_project: str) -> None:
     ## entity == concept
     entities = data[sphn_project]['concepts']
 
-    # creator = Creator(project=sphn_project,
-    #                   input_files=input_files,
-    #                   data=data,
-    #                   project_graph=project_graph,
-    #                   shacl_graph=sg,
-    #                   )
-
-    ## uncomment the following three lines, if no parallelisation!
-    patient_list = ('6D4E31E4-AD56-45E7-BAE3-98F390656FCF',
-                    'F70CEAC7-3404-4584-BEE2-7DD5CF18D897',
-                    'C04920AD-B2C8-493C-B1B9-58198F7A30E0',
-                    'B5BA28C9-328C-430F-B846-E257EEEA6749',
-                    '2FB8ABD7-2010-4D34-A0D8-A1EAD5DE9C01',
-                    '4193EB08-5A4E-47F5-95DD-516D3A348484')
 
     for patient in patient_list:
         creator = Creator(patient=patient,

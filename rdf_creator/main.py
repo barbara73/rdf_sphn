@@ -10,7 +10,7 @@ from rdf_creator.creator import run_creator
 from rdf_mapping.usz_mapping import run_mapping
 
 
-def main(argv):
+def main(argv, pat_list):
     """
     This is the starting point:
 
@@ -18,17 +18,17 @@ def main(argv):
     - second, the creator returns the turtle files
     """
     run_mapping(argv)
-    run_creator(argv)
+    run_creator(argv, pat_list)
 
 
 if __name__ == '__main__':
     import time
 
     ## uncomment following one line, if used from command line:
-    # main(argv=sys.argv[1])
+    # main(argv=sys.argv[1])  # adapt to pat_lsit
 
     ## comment following 4 lines, if used from command line
     start = time.time()
-    main('sphn')
+    main('sphn', ['a_patient_id'])
     end = time.time()
     print(end - start)
