@@ -1,29 +1,14 @@
-# SPHN RDF HospFAIR
-
-More information can be found on Wiki (https://wiki.usz.ch/display/MDM/SPHN_USZ_HospFAIR).
-
-> IMPORTANT:
->
-> Please do not change the code!
->
-> Replace new ontology version with `sphn_ontology.ttl`, adapt the mapping file accordingly (add concepts with correct datatype). 
->
-> Add also new concepts, value sets, name spaces, terminologies and instances in `configuration.yaml`.
->
-> If structure changes (e.g. nesting of BodySite drops), change this in mapping file (e.g. instead of datatype=BodySite, datatype=SNOMED). There is no need of changing the code!
->
-> If there should be a big change in the structure, then only the `uri_factory.py` needs to be changed. 
+# RDF for SPHN (HospFAIR)
 
 This code works for all SPHN projects and converts data from DB into RDF format. This `README` covers only the explanation of the code.
 
 
-
 #### Requirements
 
-- **Data** prepared as subject, predicate, object (s, p, o) for each concept (called entity in code) - see the [source table](#source-table) section:
+- **Data** as table from DB with same name in lower as concept names - will then be prepared as subject, predicate, object (s, p, o) for each concept (called entity in code) - see the [source table](#source-table) section:
   - either with a local DB, such as `SQLite3`, or
   - with a data mart in the DWH and connection to the DB - see [connection](#connection) section.
-- **Mapping file** `mapping_[project]` in DB  - see [mapping](#mapping) section.
+- **Mapping file** `mapping_[project]` in DB or as .csv file (adapt code for csv)  - see [mapping](#mapping) section.
 - **Ontology** `input/[project]_ontology.ttl`, defined for your project - see for more explanation the [sphn-documentation][https://github.com/IDSC-io/sphn-documentation].
 - **[Configuration](#configuration)** `configuration.yaml` with defined namespaces and concepts you want to run - see the [configuration](#configuration) section.
 
@@ -32,14 +17,14 @@ This code works for all SPHN projects and converts data from DB into RDF format.
 #### Output
 
 - **Mapping file** `output/ontology_[project].ttl`, which maps the column names of DB to the names (predicate) in the ontology.
-- **Turtle file** for each concept `output/transfer/CHE_229_707_417_[project_name]_[concept].ttl` file which can be shipped to SPHN - check the [resources](#resources) section.
+- **Turtle file** for each concept `output/transfer/CHE_..._[project_name]_[concept].ttl` file which can be shipped to SPHN - check the [resources](#resources) section.
 - **Log file** `logging.log` (comes from the `logdecoratorandhandler` package)
 
   
 
 
 ## Source Table
-The source table is created in SQL. In the data mart for HospFAIR, you can find nearly all the concepts, which are defined so far. Look in the stored procedures how they are created.
+The source table is created in SQL. In the data mart for HospFAIR, you can find nearly all the concepts, which are defined so far. Look in the statements how they are created. It is important to have the same column names as in the mapping file and in the statements in the statements folder. 
 
 A table contains these columns:
 
@@ -48,9 +33,9 @@ A table contains these columns:
 | 1                 | case ID                   | 123          |
 | 1                 | PID                       | 1234         |
 
-> IMPORTANT: `subj` is unique!! The triple is explicitely called subj, pred and obj. Don't giv
+> IMPORTANT: `subj` is unique!! The triple is explicitely called subj, pred and obj.
 
-For those who have no access to this `Atelier_PSSS`, I make two examples:
+Two examples:
 
 Your flat table looks like this:
 
@@ -72,11 +57,12 @@ The pivoted table should look like following:
 
 > The `pred` values are the column names of the flat table and `obj` contains the corresponding values!
 
+The pivot of each concept is already implemented in the statements folder. The only thing to prepare are the tables in the DB!
 
 ## Mapping
 In the mapping part, the name of the `pred` in the source table will be mapped to the `idp_name` (column name of flat table) in the `mapping_[project]` in the HospFAIR data mart.
 
-The `usz_mapping_to` property is added to the `ontology_[project].ttl`, which is needed for creating the RDF.
+The `mapping_to` property is added to the `ontology_[project].ttl`, which is needed for creating the RDF.
 
 
 
@@ -116,7 +102,7 @@ So, this mapping file is needed to map our DB names to the defined RDF Ontology 
 
 The script `ontology_mapping.py`:
 1. reads the `mapping_[project]`.
-2. creates a `usz_mapping_to` with the `idp_name` as value and
+2. creates a `mapping_to` with the `idp_name` as value and
 3. stores ontology as `ontology_[project].ttl`.
 
 
@@ -129,7 +115,7 @@ The `creator.py` needs as input
 - the `ontology_[project].ttl` mapping file and
 - the ontology defined by project `input/[project]_ontology.ttl`.
 
-and gives the output `CHE_229_707_417_[project]_[entity].ttl` for each concept (entity).
+and gives the output `CHE_..._[project]_[entity].ttl` for each concept (entity). With the new implementation, it is possible to get a ttl file per patient, which is important for validation, otherwise it would get too big and a SHACL validation would take too much time.
 
 These files are then transferred to a `BiomedIT Node`. If you want to know, how the data is processed, you need to look at the description in the code itself or see [Run code](#run-code).
 
@@ -195,11 +181,14 @@ The code
 
 1. parses all `ttl` files into one graph,
 2. creates a new resource graph.
-2. for each row of the source table a resource is created in the resource graph,
-   1. creates the concept class as subject.
-   2. finds the attribute in the graph and uses as predicate.
-   3. adds the literal or the resource of a concept as object.
-4. serializes as turtle and writes to `.ttl` file for each entity separate.
+3. for each patient do:
+
+	1. for each row of the source table a resource is created in the resource graph,
+  		1. creates the concept class as subject.
+   		2. finds the attribute in the graph and uses as predicate.
+   		3. adds the literal or the resource of a concept as object.
+	2. serializes as turtle and writes to `.ttl` file for each entity separate.
+	3. validate with SHACL
 
 > Important: Run the code for `sphn` and your project separately if you have two ontologies. So, you will also need two mapping files.
 
