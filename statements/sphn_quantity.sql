@@ -35,6 +35,9 @@ FROM (	SELECT DISTINCT
                     LEFT JOIN Hospfair.Patient b
                     ON a.ResearchPatientId = b.ResearchPatientId
 
+                WHERE DATEDIFF(Year, cast(CAST(YearOfBirth as char(4)) + RIGHT('00' + LTRIM(MonthOfBirth),2) +
+                    RIGHT('00' + LTRIM(DayOfBirth),2) AS Datetime), AgeDeterminationDateTime) is not NULL
+
                 UNION
 
                 SELECT DISTINCT
@@ -381,6 +384,9 @@ FROM (	SELECT DISTINCT
                     LEFT JOIN Hospfair.Patient b
                     ON a.ResearchPatientId = b.ResearchPatientId
 
+                WHERE DATEDIFF(Year, cast(CAST(YearOfBirth as char(4)) + RIGHT('00' + LTRIM(MonthOfBirth),2) + RIGHT('00' + LTRIM(DayOfBirth),2) AS Datetime),
+                    AgeDeterminationDateTime) is not NULL
+
                 UNION
 
                 SELECT DISTINCT
@@ -407,6 +413,9 @@ FROM (	SELECT DISTINCT
                     LEFT JOIN Hospfair.Patient b
                     ON a.ResearchPatientId = b.ResearchPatientId
 
+                WHERE DATEDIFF(Year, cast(CAST(YearOfBirth as char(4)) + RIGHT('00' + LTRIM(MonthOfBirth),2) + RIGHT('00' + LTRIM(DayOfBirth),2) AS Datetime),
+                    AgeDeterminationDateTime) is not NULL
+
                 UNION
 
                 SELECT DISTINCT
@@ -425,6 +434,7 @@ FROM (	SELECT DISTINCT
                     ,a.ResearchPatientId
 
                 FROM Hospfair.RadiotherapyProcedure a
+                WHERE FractionsNumber IS NOT NULL
 
                 UNION
 
@@ -444,6 +454,7 @@ FROM (	SELECT DISTINCT
                     ,a.ResearchPatientId
 
                 FROM Hospfair.RadiotherapyProcedure a
+                WHERE RadiationQuantity is not NULL
 
                 UNION
 

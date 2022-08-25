@@ -9,6 +9,7 @@ FROM (	SELECT DISTINCT
 			,patient					=	CAST(ResearchPatientId	AS VARCHAR(64))		
 			,institute					=	CAST('CHE_108_904_325'	AS VARCHAR(64))
 			,ProcedureCodingDateTime	=	CAST(CONVERT(NVARCHAR(32),[CodingDateTime], 126) AS VARCHAR(64))
+			,ProcedureStartDateTime	    =	CAST(CONVERT(NVARCHAR(32),[StartDateTime], 126) AS VARCHAR(64))
 			,ChopProcedure				=	CAST([Procedure]						AS VARCHAR(64))
 			,ProcedureBodySite			=	CASE
 												WHEN BodySite IS NULL	THEN NULL
@@ -30,6 +31,7 @@ UNPIVOT (obj FOR pred IN (fall
                         ,patient
                         ,institute
                         ,ProcedureCodingDateTime
+                        ,ProcedureStartDateTime
                         ,ChopProcedure
                         ,ProcedureRank
 						,ProcedureBodySite

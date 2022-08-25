@@ -102,6 +102,19 @@ FROM (	SELECT subj
 
                 FROM Hospfair.NursingDiagnosis a
                 WHERE Diagnosis is not NULL
+
+                UNION
+
+                SELECT DISTINCT
+                    subj				=	UniqueId_LabTest
+                    ,Code				=	CAST(LabTest	AS VARCHAR(64))
+                    ,CodeDescription	=	CAST(LabTestName AS VARCHAR(64))
+                    ,CodeVersion		=	CAST(LabTestCodingSystem	AS VARCHAR(64))
+                    ,ResearchPatientId
+
+		        FROM Hospfair.LabResult a
+		        WHERE LabTest is not NULL
+		            AND LabTestCodingSystem = 'internal'
 ) c
 WHERE ResearchPatientId = '{}'
 
